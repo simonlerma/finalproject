@@ -1,0 +1,227 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.util.Random;
+
+public class App {
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Story");
+        frame.setSize(1000, 700);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setLayout(new BorderLayout());
+
+        // Story content
+        JLabel poop1 = new JLabel("You wake up in a small room with sunlight streaming in.", SwingConstants.CENTER);
+        poop1.setFont(new Font("Serif", Font.PLAIN, 24));
+        frame.add(poop1, BorderLayout.CENTER);
+
+        JLabel poop2 = new JLabel("Actions taken: 0", SwingConstants.CENTER);
+        poop2.setFont(new Font("SansSerif", Font.PLAIN, 18));
+        frame.add(poop2, BorderLayout.NORTH);
+
+        // Buttons
+        JButton poop3 = new JButton("Go to the bathroom");
+        JButton poop4 = new JButton("Take a shit");
+        JButton poop5 = new JButton("Don't take a shit");
+        JButton poop6 = new JButton("Fight the Rat");
+        JButton poop7 = new JButton("Continue");
+        JButton poop8 = new JButton("Do the Dishes");
+        JButton poop9 = new JButton("Don't do the dishes");
+        JButton poop10 = new JButton("Plot Twist");
+        JButton poop100 = new JButton("Continue");
+
+        // Panel to hold buttons
+        JPanel buttonPanel = new JPanel(new FlowLayout());
+        buttonPanel.add(poop3);
+        frame.add(buttonPanel, BorderLayout.SOUTH);
+
+        // Variables for controlling story progression
+        final int[] poop11 = {0};
+
+        String[] poop12 = {
+            "Wash the Dishes?",
+            "You start washing dishes, bubbles forming around your hands.",
+            "Oh no the dishes begin attacking!",
+            "You ignore the dishes and walk into the living room.",
+            "The doorbell rings. A package awaits.",
+            "A letter inside tells you to leave immediately.",
+            "You pack your bag and open the front door.",
+            "A van is waiting for you outside.",
+            "The driver nods. You get in.",
+            "A dark road stretches ahead.",
+            "You feel something is watching.",
+            "The next chapter of your life begins..."
+        };
+
+        // Function to reset the story
+        Runnable poop13 = () -> {
+            poop11[0] = 0;
+            poop1.setText("You wake up in a small room with sunlight streaming in.");
+            poop2.setText("Actions taken: 0");
+
+            buttonPanel.removeAll();
+            buttonPanel.add(poop3);
+            buttonPanel.revalidate();
+            buttonPanel.repaint();
+        };
+
+        // Function to update UI
+        Runnable poop14 = () -> {
+            if (poop11[0] >= poop12.length) {
+                JOptionPane.showMessageDialog(frame, "The story has ended. Starting over!");
+                poop13.run();  // Reset the entire story
+            } else {
+                int index = poop11[0];
+                poop1.setText(poop12[index]);
+                poop2.setText("Actions taken: " + poop11[0]);
+            }
+        };
+
+        // Button actions
+        poop3.addActionListener((ActionEvent e) -> {
+            poop1.setText("You enter the bathroom and look at yourself in the mirror.");
+            poop2.setText("Actions taken: 1");
+            poop11[0] = 1;
+
+            buttonPanel.removeAll();
+            buttonPanel.add(poop4);
+            buttonPanel.add(poop5);
+            buttonPanel.revalidate();
+            buttonPanel.repaint();
+        });
+
+        poop4.addActionListener((ActionEvent e) -> {
+            poop1.setText("As you sit, you hear a scratching sound... a rat!");
+            poop2.setText("Actions taken: 2");
+
+            buttonPanel.removeAll();
+            buttonPanel.add(poop6);
+            buttonPanel.revalidate();
+            buttonPanel.repaint();
+        });
+
+        poop5.addActionListener((ActionEvent e) -> {
+            poop11[0] = 1;
+            poop14.run();
+
+            buttonPanel.removeAll();
+            buttonPanel.add(poop8);
+            buttonPanel.add(poop9);
+            buttonPanel.revalidate();
+            buttonPanel.repaint();
+        });
+
+        poop6.addActionListener((ActionEvent e) -> {
+            boolean poop15 = fightRatAndWin(frame);
+
+            if (poop15) {
+                poop1.setText("You beat the rat lesgo gang gang");
+                poop2.setText("Actions taken: 3");
+
+                boolean plagueRat = true;
+
+                buttonPanel.removeAll();
+                buttonPanel.add(poop7);
+                buttonPanel.revalidate();
+                buttonPanel.repaint();
+            } else {
+
+                poop13.run();  // reset
+            }
+        });
+
+        poop7.addActionListener((ActionEvent e) -> {
+            poop11[0] = 0;
+            poop14.run();
+
+            buttonPanel.removeAll();
+            buttonPanel.add(poop8);
+            buttonPanel.add(poop9);
+            buttonPanel.revalidate();
+            buttonPanel.repaint();
+        });
+
+        poop8.addActionListener((ActionEvent e) -> {
+            poop11[0] = 1;
+            poop14.run();
+
+            buttonPanel.removeAll();
+            buttonPanel.add(poop100);
+            buttonPanel.revalidate();
+            buttonPanel.repaint();
+        });
+
+        poop100.addActionListener((ActionEvent e) -> {
+            boolean poop16 = fightDish(frame);
+
+            if (poop16) {
+                poop1.setText("You beat the dishes yer yer");
+                poop2.setText("3");
+
+                boolean plate = true;
+
+                buttonPanel.removeAll();
+                buttonPanel.add(poop7);
+                buttonPanel.revalidate();
+                buttonPanel.repaint();
+
+                
+            } else {
+                poop13.run();  // reset
+            }
+        });
+        
+
+        poop9.addActionListener((ActionEvent e) -> {
+            poop11[0] = (poop11[0] % 2 == 0) ? poop11[0] + 2 : poop11[0] + 1;
+            poop14.run();
+        });
+
+        poop10.addActionListener((ActionEvent e) -> {
+            poop11[0] = (poop11[0] % 2 != 0) ? poop11[0] + 2 : poop11[0] + 1;
+            poop14.run();
+        });
+
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+    }
+
+    // combat placeholder
+    public static boolean fightRatAndWin(JFrame parent) {
+        int result = JOptionPane.showConfirmDialog(parent, "A rat appears! Do you want to fight it?", "Combat!",
+                JOptionPane.YES_NO_OPTION);
+        if (result == JOptionPane.YES_OPTION) {
+            boolean win = new Random().nextBoolean();
+            if (win) {
+                JOptionPane.showMessageDialog(parent, "You defeated the rat!");
+                return true;
+                
+            } else {
+                JOptionPane.showMessageDialog(parent, "You were defeated by the rat...");
+                return false;
+            }
+        } else {
+            JOptionPane.showMessageDialog(parent, "You tried to run, but the rat cornered you. You lose.");
+            return false;
+        }
+    }
+
+    public static boolean fightDish(JFrame parent) {
+        int result = JOptionPane.showConfirmDialog(parent, "The dishes are attacking! Fight back?", "Combat!",
+                JOptionPane.YES_NO_OPTION);
+        if (result == JOptionPane.YES_OPTION) {
+            boolean win = new Random().nextBoolean();
+            if (win) {
+                JOptionPane.showMessageDialog(parent, "You defeated the dishes!");
+                return true;
+            } else {
+                JOptionPane.showMessageDialog(parent, "You were defeated by the dishes...");
+                return false;
+            }
+        } else {
+            JOptionPane.showMessageDialog(parent, "You ignore the dishes and walk into the living room");
+            return false;
+        }
+    }
+}
