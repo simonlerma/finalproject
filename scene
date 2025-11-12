@@ -17,7 +17,7 @@ public class Scene {
     } */
 
     // Method to get Dialogue
-    public ArrayList<String> getFruits() {
+    public ArrayList<String> gettalk() {
         return talk;
     }
 
