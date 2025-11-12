@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class Scene {
+    // Declare the ArrayList as a member variable
+    private ArrayList<String> talk;
+
+    // Constructor to initialize and add some items
+    public Scene() {
+        talk = new ArrayList<>();
+        talk.add("aaaa");
+
+    }
+
+    /* Add dialogue
+    public void addFruit(String talk) {
+        talk.add(talk);
+    } */
+
+    // Method to get Dialogue
+    public ArrayList<String> getFruits() {
+        return talk;
+    }
+
+    // Method to print Dialogue
+    public void printFruits() {
+        for (String talk : talk) {
+            System.out.println(talk);
+        }
+    }
+}
