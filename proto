@@ -1,1 +1,156 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Scene 
+{
+    private String imagePath;
+    private String sceneText;
+    private String buttonOneText;
+    private String buttonTwoText;
+
+    public Scene(String img, String sTxt, String b1Txt, String b2Txt)
+    {
+        this.imagePath = img;
+        this.sceneText = sTxt;
+        this.buttonOneText = b1Txt;
+        this.buttonTwoText = b2Txt;                                                
+    }
+
+    public String getImageFilePath()
+    {
+        return imagePath;
+    }
+
+    public String getScneneText()
+    {
+        return sceneText;
+    }
+
+    public String getButtonOneText()
+    {
+        return buttonOneText;
+    }
+
+    public String getButtonTwoText()
+    {
+        return buttonTwoText;
+    }
+
+
+    //       ALL SCENES WITH IMAGE PLACEHOLDERS
+
+    public static Scene scene1 = new Scene(
+        "placeholder.png",
+        "6:30 AM alarm goes off. Important presentation today.",
+        "Hit Snooze",
+        "Get Up"
+    );
+
+    public static Scene scene2 = new Scene(
+        "placeholder.png",
+        "You start your commute. The city is waking up as you rush out the door.",
+        "Walk calmly",
+        "Speed walk"
+    );
+
+    public static Scene scene3 = new Scene(
+        "placeholder.png",
+        "An elderly neighbor struggles with their groceries.",
+        "Help them",
+        "Ignore them"
+    );
+
+    public static Scene scene4 = new Scene(
+        "placeholder.png",
+        "At the coffee shop, someone spills coffee on your shirt.",
+        "Accept their apology",
+        "Get angry"
+    );
+
+    public static Scene scene5 = new Scene(
+        "placeholder.png",
+        "A homeless man asks if you have any spare change.",
+        "Give him money",
+        "Walk past him"
+    );
+
+    public static Scene scene6 = new Scene(
+        "placeholder.png",
+        "Traffic is heavy. Someone signals trying to merge into your lane.",
+        "Let them merge",
+        "Block them"
+    );
+
+    public static Scene scene7 = new Scene(
+        "placeholder.png",
+        "You arrive at work. A coworker needs help finishing a report.",
+        "Help them",
+        "Tell them you're too busy"
+    );
+
+    public static Scene scene8 = new Scene(
+        "placeholder.png",
+        "Someone left sensitive documents on the printer.",
+        "Turn them in",
+        "Ignore them"
+    );
+
+    public static Scene scene9 = new Scene(
+        "placeholder.png",
+        "Your boss asks for your honest thoughts about a new project idea.",
+        "Tell the truth respectfully",
+        "Tell them what they want to hear"
+    );
+
+    public static Scene scene10 = new Scene(
+        "placeholder.png",
+        "You notice someone can't afford their lunch.",
+        "Pay for their meal",
+        "Walk away"
+    );
+
+    public static Scene scene11 = new Scene(
+        "placeholder.png",
+        "It's time for your big presentation.",
+        "Stay calm and focused",
+        "Blame others for mistakes"
+    );
+
+    public static Scene scene12 = new Scene(
+        "placeholder.png",
+        "On the drive home, you witness a minor car accident.",
+        "Stop and help",
+        "Keep driving"
+    );
+
+    public static Scene scene13 = new Scene(
+        "placeholder.png",
+        "You reflect on your day's choices.",
+        "Feel proud",
+        "Feel guilty"
+    );
+
+    //        ENDINGS
+
+    public static Scene heavenEnding = new Scene(
+        "placeholder.png",
+        "Light fills your path.\nYour selfless choices have led you to peace.\nYou earned the HEAVEN ending.",
+        "Play Again",
+        "Quit"
+    );
+
+    public static Scene purgatoryEnding = new Scene(
+        "placeholder.png",
+        "Your day was… average. Not heroic, not cruel.\nYou drift into PURGATORY.",
+        "Play Again",
+        "Quit"
+    );
+
+    public static Scene hellEnding = new Scene(
+        "placeholder.png",
+        "Darkness surrounds you.\nYour choices were selfish and harmful.\nYou earned the HELL ending.",
+        "Play Again",
+        "Quit"
+    );
+}
 
