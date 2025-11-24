@@ -2,6 +2,7 @@
 
 ## Starting Point
 **Scene 1: The Alarm**
+//Wake up- 6:30AM alarm
 - 6:30 AM alarm goes off. Important presentation today.
 - **Choice:** Hit snooze?
   - YES → Go to Scene 2A
@@ -12,21 +13,27 @@
 ## Path A: The Snooze Route
 
 **Scene 2A: Running Late**
+//open eyes- 7:15 alarm- wake up and panickedly prepare
 - Wakes up 45 minutes late, panicking
+//old man on the road with grocery bag-thinking
 - Sees elderly neighbor struggling with grocery bags
 - **Choice:** Stop to help?
   - YES → Go to Scene 3A
   - NO → Go to Scene 3B
 
 **Scene 3A: The Good Deed**
+//fastly help- get to work at 8:15
 - Helps neighbor, now very late for work
+//boss gets angry and ask
 - Boss asks where he's been
 - **Choice:** Tell the truth?
   - YES → Go to Scene 4A (Path toward Heaven)
   - NO → Go to Scene 4B (Path toward Hell)
 
 **Scene 3B: The Rush**
+//go ahead to take the train
 - Ignores neighbor, speeds to work
+//see a homeless at the train station
 - Homeless person asks for change
 - **Choice:** Give them money?
   - YES → Go to Scene 4C (Neutral path)
@@ -37,13 +44,16 @@
 ## Path B: The Early Bird Route
 
 **Scene 2B: On Time**
+//wake up- prepare- leave house
 - Gets up immediately, ready early
+//go to the coffee shop which is next door of the company, the waiter spills coffee
 - At coffee shop, someone spills coffee on his shirt
 - **Choice:** Accept apology graciously?
   - YES → Go to Scene 3C
   - NO → Go to Scene 3D
 
 **Scene 3C: The Forgiving Soul**
+//forgive-the waiter gives another coffee
 - Forgives the person, they offer to buy new coffee
 - At work, coworker takes credit for his idea
 - **Choice:** Call them out?
@@ -51,7 +61,9 @@
   - NO → Go to Scene 4F (Passive path)
 
 **Scene 3D: The Angry One**
+//making face and do not forgive-the waiter still say sorry and leave hurt
 - Berates the person, they leave hurt
+//leave the coffeshop- $200 on the floor
 - Finds wallet with $200 in parking lot
 - **Choice:** Turn it in?
   - YES → Go to Scene 4G (Redemption path)
@@ -60,42 +72,51 @@
 ---
 
 ## Mid-Story Scenes (Building toward endings)
-
+this is for the late option
 **Scene 4A: Honest and Late**
-- Boss impressed by integrity
+//Boss skeptical of excuse but remind for next time not to get up late- say thank you
+- Boss skeptical of excuse
+//at lunch time, go to the cafeteria- see a co-worker- his card has an issue so he can not pay
 - Sees someone can't afford lunch
 - **Choice:** Pay for their meal?
   - YES → **HEAVEN ENDING**
   - NO → **PURGATORY ENDING**
 
 **Scene 4B: The Liar**
+//Boss skeptical of excuse- feel so anxious- but boss does not say anything just a warning
 - Boss skeptical of excuse
+//people talking- being curious
 - Coworkers gossiping about someone
 - **Choice:** Join in?
   - YES → Go to Scene 5A (Path toward Hell)
   - NO → Go to Scene 5B (Possible redemption)
 
 **Scene 4C: Small Kindness**
+//give him change- the homeless say thanks- on the train- see him buy a sandwich for his son
 - Homeless person thanks him
+//arrive and take a sit- get ready but a coworker come ahead- she asks us to cover her mistake
 - Coworker asks him to cover for their mistake
 - **Choice:** Take the blame?
   - YES → Go to Scene 5C (Path toward Heaven)
   - NO → Go to Scene 5D (Neutral/Hell path)
 
 **Scene 4D: Ignoring Needs**
+//arrive nearly the presentation time- rushed and fail- boss angry
 - Rushed presentation fails badly
+//anxious and blame for team as they did not help him out
 - Blames team in front of management
 - **Choice:** Apologize later?
   - YES → Go to Scene 5E (Possible redemption)
   - NO → **HELL ENDING**
 
 **Scene 4E: Standing Up**
+//
 - Confronts coworker professionally, they apologize
 - Finds sensitive documents left on printer
 - **Choice:** Report security breach?
   - YES → **HEAVEN ENDING**
   - NO → **PURGATORY ENDING**
-
+!!!!
 **Scene 4F: Letting It Go**
 - Stays silent, feels frustrated
 - Witnesses car accident on way home
