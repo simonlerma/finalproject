@@ -1,0 +1,31 @@
+/* in progress  =*/
+
+package finalProject;
+
+public class Intro {
+	
+	/* add 6:30 Alarm */
+	
+	/* Sleep or wake up */
+	
+	public class Sleep {
+		/* running late */
+		
+		/*neighbor assistance */
+	}
+	
+	public class WakeUp {
+		/* connect to coffee shop class? */ 
+	}
+	
+	
+	
+	// buttons
+	JButton button1 = new JButton("Get up");
+	JButton button2 = new JButton("Stay in bed");
+	JButton button3 = new JButton("Take a shower");
+	JButton button4 = new JButton("Got to the toilet");
+}
+
+/* Note: Compile all images together - another class */
+
