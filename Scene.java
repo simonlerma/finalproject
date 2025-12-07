@@ -1,38 +1,25 @@
-import javax.swing.*;
-import java.awt.*;
-
-public class Scene 
-{
+public class Scene {
     private String imagePath;
     private String sceneText;
     private String buttonOneText;
     private String buttonTwoText;
+    private int nextSceneOne;
+    private int nextSceneTwo;
 
-    public Scene(String img, String sTxt, String b1Txt, String b2Txt)
-    {
-        this.imagePath = img;
-        this.sceneText = sTxt;
-        this.buttonOneText = b1Txt;
-        this.buttonTwoText = b2Txt;                                                
+    public Scene(String imagePath, String sceneText, String buttonOneText, String buttonTwoText,
+                int nextSceneOne, int nextSceneTwo) {
+        this.imagePath = imagePath;
+        this.sceneText = sceneText;
+        this.buttonOneText = buttonOneText;
+        this.buttonTwoText = buttonTwoText;
+        this.nextSceneOne = nextSceneOne;
+        this.nextSceneTwo = nextSceneTwo;
     }
 
-    public String getImageFilePath()
-    {
-        return imagePath;
-    }
-
-    public String getScneneText()
-    {
-        return sceneText;
-    }
-
-    public String getButtonOneText()
-    {
-        return buttonOneText;
-    }
-
-    public String getButtonTwoText()
-    {
-        return buttonTwoText;
-    }
+    public String getImagePath() { return imagePath; }
+    public String getSceneText() { return sceneText; }
+    public String getButtonOneText() { return buttonOneText; }
+    public String getButtonTwoText() { return buttonTwoText; }
+    public int getNextSceneOne() { return nextSceneOne; }
+    public int getNextSceneTwo() { return nextSceneTwo; }
 }
